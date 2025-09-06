@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:conversor_unidades/units/temperature/kelvin_unit.dart';
-import 'package:conversor_unidades/units/temperature/celsius_unit.dart';
+import 'package:conversor_unidades/domain/units/temperature/kelvin_unit.dart';
+import 'package:conversor_unidades/domain/units/temperature/celsius_unit.dart';
 
 void main() {
   group('KelvinUnit converters', () {

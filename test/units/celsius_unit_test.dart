@@ -1,13 +1,13 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:conversor_unidades/units/temperature/celsius_unit.dart';
-import 'package:conversor_unidades/units/temperature/kelvin_unit.dart';
+import 'package:conversor_unidades/domain/units/temperature/celsius_unit.dart';
+import 'package:conversor_unidades/domain/units/temperature/kelvin_unit.dart';
 
 void main() {
   group('CelsiusUnit converters', () {
     test('should convert Celsius to Kelvin using converters map', () {
       final celsius = CelsiusUnit(0);
 
-      final converter = celsius.converters[KelvinUnit];
+      final converter = celsius.converters[KelvinUnit.new];
       expect(
         converter,
         isNotNull,
@@ -22,7 +22,7 @@ void main() {
 
     test('should not have unexpected converters', () {
       final celsius = CelsiusUnit(0);
-      expect(celsius.converters.containsKey(KelvinUnit), true);
+      expect(celsius.converters.containsKey(KelvinUnit.new), true);
     });
   });
 }
